@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Responsive Website</title>
-</head>
-<body class="p-5 md:p-10 text-gray-800">
-    <!-- <section class="bg-purple-100 rounded-2xl p-5 mb-10">
+  </head>
+  <body class="p-5 md:p-10 text-gray-800">
+    <!-- home -->
+    <section class="bg-purple-100 rounded-2xl p-5 mb-10">
         <div class="container mx-auto">
             <div class="flex">
                 <a href="index.html" class="text-3xl font-bold pr-5 border-r border-purple-300 mr-5">NK</a>
                 <div class="my-auto">
-                    <button class="lg:hidden">
+                    <button class="lg:hidden" onclick="menuClick()">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                             <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                           </svg>                          
@@ -34,7 +35,7 @@
                   </a>
             </div>
             
-            <div class="hidden">
+            <div class="hidden" id="mobileMenu">
                 <ul class="lg:hidden font-bold text-gray-600">
                     <li class="mt-1"><a class="py-2" href="#">Home</a></li>
                     <li class="mt-1"><a class="py-2" href="#">About</a></li>
@@ -70,6 +71,7 @@
         </div>
     </section>
 
+    <!-- Services -->
     <section class="bg-red-100 rounded-2xl p-5 mb-10">
         <div class="container mx-auto">
             <div class="py-14 lg:py-28">
@@ -141,9 +143,9 @@
                 </div>
             </div> 
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="bg-red-100 rounded-2xl p-5 mb-10">
+    <section class="bg-red-100 rounded-2xl p-5 mb-10">
         <div class="container mx-auto">
             <div class="py-14 lg:py-28">
                 <h2 class="text-center text-3xl lg:text-5xl font-bold">
@@ -229,9 +231,9 @@
                 <a href="#" class="mx-auto bg-purple-600 text-white rounded font-semibold text-lg px-5 py-2">Explore</a>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="bg-purple-100 rounded-2xl p-5 mb-10">
+    <section class="bg-purple-100 rounded-2xl p-5 mb-10">
         <div class="container mx-auto">
             <div class="py-14 lg:py-28">
                 <h2 class="text-center text-3xl lg:text-5xl font-bold">
@@ -467,9 +469,9 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <!-- <section class="bg-gray-900 rounded-2xl p-5 mb-10">
+    <section class="bg-gray-900 rounded-2xl p-5 mb-10">
         <div class="container mx-auto">
             <div class="flex flex-wrap">
                 <div class="w-full lg:w-1/2 xl:w-1/4 p-5 text-white">
@@ -525,7 +527,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <section class="bg-red-100 rounded-2xl p-5 mb-10">
         <div class="container mx-auto py-24">
@@ -577,5 +579,274 @@
             </div>
         </div>
     </section>
-</body>
+
+    <!-- Projects -->
+    <section class="rounded-2xl p-5 mb-10">
+        <div class="container mx-auto">
+            <div class="py-14 lg:py-5">
+                <h2 class="text-center text-3xl lg:text-5xl font-bold">
+                    Our Projects
+                </h2>
+                <p class="lg:w-1/2 text-center mx-auto mt-5">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, eos laboriosam officia sit voluptatem possimus dicta ducimus aspernatur placeat quis repellat libero, enim quae, et ab labore! Deserunt, asperiores ex!
+                </p>
+            </div>
+            <div class="mt-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                    <div class="bg-purple-50 rounded-2xl p-10 text-center">
+                        <img src="./assets/minato.jpg" class="mx-auto w-64 h-64 rounded-2xl shadow-md" alt="">
+                        <h2 class="mt-3 text-xl font-bold text-purple-900">Minato Namikaze</h2>
+                        <p class="text-gray-500 font-semibold">Designation</p>
+                        <ul class="flex justify-center mt-3">
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 rounded-2xl p-10 text-center">
+                        <img src="./assets/itachi.jpg" class="mx-auto w-64 h-64 rounded-2xl shadow-md" alt="">
+                        <h2 class="mt-3 text-xl font-bold text-purple-900">Itachi Uchiha</h2>
+                        <p class="text-gray-500 font-semibold">Designation</p>
+                        <ul class="flex justify-center mt-3">
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 rounded-2xl p-10 text-center">
+                        <img src="./assets/peakpx (5).jpg" class="mx-auto w-64 h-64 rounded-2xl shadow-md" alt="">
+                        <h2 class="mt-3 text-xl font-bold text-purple-900">Tobi</h2>
+                        <p class="text-gray-500 font-semibold">Designation</p>
+                        <ul class="flex justify-center mt-3">
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 rounded-2xl p-10 text-center">
+                        <img src="./assets/naruto.jpg" class="mx-auto w-64 h-64 rounded-2xl shadow-md" alt="">
+                        <h2 class="mt-3 text-xl font-bold text-purple-900">naruto</h2>
+                        <p class="text-gray-500 font-semibold">Designation</p>
+                        <ul class="flex justify-center mt-3">
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 rounded-2xl p-10 text-center">
+                        <img src="./assets/nk.png" class="mx-auto w-64 h-64 rounded-2xl shadow-md" alt="">
+                        <h2 class="mt-3 text-xl font-bold text-purple-900">Nandhakumar</h2>
+                        <p class="text-gray-500 font-semibold">Designation</p>
+                        <ul class="flex justify-center mt-3">
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 rounded-2xl p-10 text-center">
+                        <img src="./assets/itachi.jpg" class="mx-auto w-64 h-64 rounded-2xl shadow-md" alt="">
+                        <h2 class="mt-3 text-xl font-bold text-purple-900">Itachi</h2>
+                        <p class="text-gray-500 font-semibold">Designation</p>
+                        <ul class="flex justify-center mt-3">
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+                                </a>
+                            </li>
+                            <li class="p-2 bg-white shadow rounded mx-1">
+                                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"/></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact us -->
+    <section class="bg-red-100 rounded-2xl p-5 mb-10">
+        <div class="container mx-auto">
+            <div class="py-14 lg:py-5">
+                <h2 class="text-center text-3xl lg:text-5xl font-bold">
+                    Contact us
+                </h2>
+                <p class="lg:w-1/2 text-center mx-auto mt-5">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, eos laboriosam officia sit voluptatem possimus dicta ducimus aspernatur placeat quis repellat libero, enim quae, et ab labore! Deserunt, asperiores ex!
+                </p>
+            </div>
+            <div class="mt-7 lg:w-1/2 mx-auto mb-7">
+                <form action="">
+                    <div class="flex mb-3 p-2 rounded bg-white border focus-within:border-purple-700">
+                        <div class="w-auto flex px-2 text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-auto">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                              </svg>                                          
+                        </div>
+                        <div class="w-full">
+                            <span class="block text-gray-300">Enter your name</span> 
+                            <input class="w-full p-1 focus:outline-none border-b" type="text"> 
+                        </div>
+                    </div>
+                    <div class="flex p-2 rounded bg-white border focus-within:border-purple-700">
+                        <div class="w-auto flex px-2 text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-auto">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m7.875 14.25 1.214 1.942a2.25 2.25 0 0 0 1.908 1.058h2.006c.776 0 1.497-.4 1.908-1.058l1.214-1.942M2.41 9h4.636a2.25 2.25 0 0 1 1.872 1.002l.164.246a2.25 2.25 0 0 0 1.872 1.002h2.092a2.25 2.25 0 0 0 1.872-1.002l.164-.246A2.25 2.25 0 0 1 16.954 9h4.636M2.41 9a2.25 2.25 0 0 0-.16.832V12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 12V9.832c0-.287-.055-.57-.16-.832M2.41 9a2.25 2.25 0 0 1 .382-.632l3.285-3.832a2.25 2.25 0 0 1 1.708-.786h8.43c.657 0 1.281.287 1.709.786l3.284 3.832c.163.19.291.404.382.632M4.5 20.25h15A2.25 2.25 0 0 0 21.75 18v-2.625c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125V18a2.25 2.25 0 0 0 2.25 2.25Z" />
+                              </svg>                                   
+                        </div>
+                        <div class="w-full">
+                            <span class="block text-gray-300">Enter your Email</span> 
+                            <input class="w-full p-1 focus:outline-none border-b" type="text"> 
+                        </div>
+                    </div>
+                    <div class="flex mb-3 p-2 rounded bg-white border focus-within:border-purple-700 mt-2">
+                        <div class="w-auto flex px-2 text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 my-auto">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                              </svg>                                          
+                        </div>
+                        <div class="w-full">
+                            <span class="block text-gray-300">Choose One</span> 
+                            <select class="w-full p-1 focus:outline-none border-b" name="" id="">
+                                <option value="Design">Design</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="Angular Developer">Angular Developer</option>
+                                <option value="Full Stack Developer">Full Stack Developer</option>
+                                <option value="Java">Java</option>
+                            </select> 
+                        </div>
+                    </div>
+
+                    <div class="flex mb-3 p-2 rounded bg-white border focus-within:border-purple-700 mt-2">
+                        <div class="w-auto flex px-2 text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/>
+                              </svg>           
+                        </div>
+                        <div class="w-full">
+                            <span class="block text-gray-300">Enter Your Message</span> 
+                           <textarea name="" class="w-full p-1 focus:outline-none border-b" id=""></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <button class="w-full md:w-auto text-white bg-purple-500 rounded px-3 py-2 block mt-3 font-semibold">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="rounded-2xl p-5 mb-10">
+        <div class="container mx-auto rounded-3xl bg-gradient-to-r from-purple-500 to-red-500 text-white">
+            <div class="py-14 lg:py-5">
+                <h2 class="text-center text-3xl lg:text-5xl font-bold">
+                    Lets do something amazing
+                </h2>
+                <p class="lg:w-1/2 text-center mx-auto mt-5">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                </p>
+                <div class="flex mt-8">
+                    <button class="mx-auto bg-white p-2 px-3 rounded text-gray-800 font-semibold text-lg">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="rounded-2xl p-5 bg-gray-800 text-white">
+      <div class="flex flex-wrap">
+        <div class="p-5 lg:p-10 md:w-1/3 py-12">
+          <h2 class="font-extrabold text-2xl">Nandhakumar</h2>
+          <p class="text-gray-400 mt-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            soluta error asperiores vero repudiandae illo tempora repellat totam
+            molestias, libero earum aliquam culpa magni similique cum velit
+            neque. Illum, eveniet.
+          </p>
+        </div>
+        <div class="p-5 lg:p-10 md:w-1/3 py-12">
+            <h2 class="font-extrabold text-2xl">Address</h2>
+          <p class="text-gray-400">
+            Address line 1 <br/>
+            Address line 2 <br/>
+            Address line 3 <br/>
+            Pincode-602001
+          </p>
+        </div>
+        <div class="p-5 lg:p-10 md:w-1/3 py-12">
+            <h2 class="font-extrabold text-2xl">Inqueries</h2>
+            <p class="text-gray-400">
+                <a href="tel:+918344250128">Contact : 8344250128</a><br/>
+                <a href="mailto:Nknandhakumar64@gmail.com">Nknandhakumar64@gmail.com</a><br>
+            </p>
+            <ul class="flex mt-3">
+                <li class="p-2 bg-white shadow rounded mx-1">
+                    <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm2.218 18.616c-.354.069-.468-.149-.468-.336v-1.921c0-.653-.229-1.079-.481-1.296 1.56-.173 3.198-.765 3.198-3.454 0-.765-.273-1.389-.721-1.879.072-.177.312-.889-.069-1.853 0 0-.587-.188-1.923.717-.561-.154-1.159-.231-1.754-.234-.595.003-1.193.08-1.753.235-1.337-.905-1.925-.717-1.925-.717-.379.964-.14 1.676-.067 1.852-.448.49-.722 1.114-.722 1.879 0 2.682 1.634 3.282 3.189 3.459-.2.175-.381.483-.444.936-.4.179-1.413.488-2.037-.582 0 0-.37-.672-1.073-.722 0 0-.683-.009-.048.426 0 0 .46.215.777 1.024 0 0 .405 1.25 2.353.826v1.303c0 .185-.113.402-.462.337-2.782-.925-4.788-3.549-4.788-6.641 0-3.867 3.135-7 7-7s7 3.133 7 7c0 3.091-2.003 5.715-4.782 6.641z"/></svg>
+                    </a>
+                </li>
+                <li class="p-2 bg-white shadow rounded mx-1">
+                    <a href="#"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/></svg>
+                    </a>
+                </li>
+                <li class="p-2 bg-white shadow rounded mx-1">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.5 8.778c-.441.196-.916.328-1.414.388.509-.305.898-.787 1.083-1.362-.476.282-1.003.487-1.564.597-.448-.479-1.089-.778-1.796-.778-1.59 0-2.758 1.483-2.399 3.023-2.045-.103-3.86-1.083-5.074-2.572-.645 1.106-.334 2.554.762 3.287-.403-.013-.782-.124-1.114-.308-.027 1.14.791 2.207 1.975 2.445-.346.094-.726.116-1.112.042.313.978 1.224 1.689 2.3 1.709-1.037.812-2.34 1.175-3.647 1.021 1.09.699 2.383 1.106 3.773 1.106 4.572 0 7.154-3.861 6.998-7.324.482-.346.899-.78 1.229-1.274z"/></svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+      <div class=" text-center text-gray-500 border-t border-gray-500 pt-3">
+        All Rights Reserved Nandhakumar
+      </div>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
 </html>
